@@ -428,17 +428,12 @@ flowchart TD
     J --> K[Log Incident]
 ```
 
-Now I need to use the prework tool to analyze the acceptance criteria before writing the Correctness Properties section.
 
 <function_calls>
 <invoke name="prework">
 <parameter name="featureName">aeris-pollution-compliance
 
 ## Correctness Properties
-
-*A property is a characteristic or behavior that should hold true across all valid executions of a system—essentially, a formal statement about what the system should do. Properties serve as the bridge between human-readable specifications and machine-verifiable correctness guarantees.*
-
-Based on the prework analysis, I've identified properties that can be combined and redundant ones that should be eliminated. After property reflection, here are the essential correctness properties:
 
 ### Property 1: Sensor Data Collection Timing Consistency
 *For any* operational period and any sensor type (smoke, soot, temperature, current), the Edge_Device should collect readings at the specified intervals: smoke every 10 seconds, soot every 30 seconds, temperature and current every 5 seconds.
